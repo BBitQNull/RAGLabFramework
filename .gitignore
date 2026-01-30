@@ -11,3 +11,6 @@ wheels/
 
 # datasets
 /datasets
+
+# Macos
+.DS_Store
