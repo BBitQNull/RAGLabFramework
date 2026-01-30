@@ -1,0 +1,22 @@
+[Dataset]
+dataset_path_name = "train-00000-of-00001.parquet"
+dataset_path_dir = "./datasets"
+
+[EncoderModel]
+encoder_model_name = "all-MiniLM-L6-v2"
+
+[RetrievalDatabase]
+retrieval_database_name = "test"
+retrieval_database_dir = "./result"
+split_method = "RecursiveCharacterTextSplitter"
+dataset_bench_size = 256
+chunk_size = 1000
+chunk_overlap = 300
+
+[Retriever]
+k = 4
+search_type = "mmr"
+score_threshold = 0.8
+fetch_k = 20
+lambda_mult = 0.5
+filter = { "paper_title" = "GPT-4 Technical Report" }
